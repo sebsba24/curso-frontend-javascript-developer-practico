@@ -1,3 +1,4 @@
+/* * General */
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -14,6 +15,12 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.inactive {
+    display: none;
+}
+
+
+/* * Navbar (general) */
 nav {
     display: flex;
     justify-content: space-between;
@@ -64,9 +71,9 @@ nav {
 
 .navbar-email {
     color: var(--very-light-pink);
+    cursor: pointer;
     font-size: var(--sm);
     margin-right: 12px;
-    cursor: pointer;
 }
 
 .navbar-shopping-cart {
@@ -88,12 +95,12 @@ nav {
     align-items: center;
 }
 
-/* * ----------Desktop Menu---------------- */
+/* * Menu en desktop */
 .desktop-menu {
     position: absolute;
-    background-color: var(--white);
     top: 60px;
     right: 60px;
+    background: var(--white);
     width: 100px;
     height: auto;
     border: 1px solid var(--very-light-pink);
@@ -135,15 +142,11 @@ nav {
     display: inline-block;
 }
 
-.inactive {
-    opacity: 0;
-}
-
-/* * ----------Mobile Menu---------------- */
-
+/* * Menu en mobile */
 .mobile-menu {
     background-color: var(--white);
     position: absolute;
+    top: 60px;
     top: 61px;
     padding: 24px;
     left: 0;
@@ -182,8 +185,8 @@ nav {
     color: var(--hospital-green) !important;
 }
 
-/* * ----------Aside (shopping cart Menu and product detail)---------------- */
 
+/* Aside (product detail y carrito) */
 aside {
     background-color: var(--white);
     width: 360px;
@@ -192,8 +195,8 @@ aside {
     right: 0;
 }
 
-/* * -----------ShoppingCart------------ */
-#shoppingCartContainer{
+/* ShoppingCart */
+#shoppingCartContainer {
     padding: 0 24px;
 }
 
@@ -277,8 +280,7 @@ aside {
     height: 50px;
 }
 
-/* * -----------ProductDetail------------ */
-
+/* ProductDetail */
 .product-detail-close {
     background: var(--white);
     width: 14px;
@@ -295,7 +297,7 @@ aside {
     cursor: pointer;
 }
 
-#productDetail > img:nth-child(2) {
+#productDetail>img:nth-child(2) {
     width: 100%;
     height: 360px;
     object-fit: cover;
@@ -345,14 +347,14 @@ aside {
     justify-content: center;
 }
 
-/* * -----------------Product List--------------- */
 
+/* Product List */
 .cards-container {
-    margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
     gap: 26px;
     place-content: center;
+    margin-top: 20px;
 }
 
 .product-card {
@@ -396,6 +398,7 @@ aside {
     color: var(--very-light-pink);
 }
 
+
 @media (max-width: 640px) {
     .menu {
         display: block;
@@ -432,9 +435,7 @@ aside {
 }
 
 @media (min-width: 641px) {
-
     .mobile-menu {
         display: none;
     }
-
 }
